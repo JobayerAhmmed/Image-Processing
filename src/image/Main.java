@@ -1,6 +1,12 @@
 package image;
 
+import array.Array;
 import borno.LetterSeparation;
+import colorimage.RedEye;
+import colorimage.SkinDetection;
+import kmeans.Kmeans;
+import meanshift.MeanShift;
+import otsu.Otsu;
 
 import java.io.IOException;
 
@@ -8,7 +14,23 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 //        CornerDetection.detectCorner();
-        LetterSeparation.separateLetter();
 
+//        LetterSeparation letterSeparation = new LetterSeparation();
+//        letterSeparation.separateLetter();
+
+//        Kmeans kmeans = new Kmeans();
+//        kmeans.applyKmeans();
+
+//        MeanShift meanShift = new MeanShift();
+//        meanShift.applyMeanshift();
+
+//        Otsu otsu = new Otsu();
+//        otsu.testOtsu();
+
+//        SkinDetection skinDetection = new SkinDetection();
+//        skinDetection.detectSkinByRgb();
+//
+        RedEye redEye = new RedEye();
+        redEye.detectRedEye();
     }
 }

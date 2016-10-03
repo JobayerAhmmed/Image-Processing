@@ -11,18 +11,18 @@ import java.io.IOException;
  */
 public class ImageProcessing {
 
-    public static BufferedImage readImage(String path) throws IOException {
+    public BufferedImage readImage(String path) throws IOException {
         BufferedImage bufferedImage = ImageIO.read(new File(path));
         return bufferedImage;
     }
 
-    public static void writeImage(BufferedImage bufferedImage, String path) throws IOException {
+    public void writeImage(BufferedImage bufferedImage, String path) throws IOException {
 //        int index = path.lastIndexOf('.');
 //        String format = (index == -1) ? "png" : path.substring(index);
         ImageIO.write(bufferedImage, "png", new File(path));
     }
 
-    public static int[][][] getRGB(BufferedImage bufferedImage) {
+    public int[][][] getRGB(BufferedImage bufferedImage) {
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
         int[][][] rgb = new int[width][height][3];
@@ -39,7 +39,7 @@ public class ImageProcessing {
         return rgb;
     }
 
-    public static int[][] getGray(BufferedImage bufferedImage) {
+    public int[][] getGray(BufferedImage bufferedImage) {
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
         int[][] gray = new int[width][height];
@@ -53,7 +53,7 @@ public class ImageProcessing {
         return gray;
     }
 
-    public static int[][] rgbToGray(int[][][] rgb) {
+    public int[][] rgbToGray(int[][][] rgb) {
         int width = rgb.length;
         int height = rgb[0].length;
         int[][] gray = new int[width][height];
@@ -66,7 +66,7 @@ public class ImageProcessing {
         return gray;
     }
 
-    public static int[][] grayToBinary(int[][] gray, int threshold) {
+    public int[][] grayToBinary(int[][] gray, int threshold) {
         int width = gray.length;
         int height = gray[0].length;
         int[][] binary = new int[width][height];
@@ -82,7 +82,7 @@ public class ImageProcessing {
         return binary;
     }
 
-    public static int[][] grayToBlackAndWhite(int[][] gray, int threshold) {
+    public int[][] grayToBlackAndWhite(int[][] gray, int threshold) {
         int width = gray.length;
         int height = gray[0].length;
         int[][] blackAndWhite = new int[width][height];
@@ -90,15 +90,17 @@ public class ImageProcessing {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
                 if (gray[i][j] > threshold)
-                    blackAndWhite[i][j] = 0;
-                else
                     blackAndWhite[i][j] = 255;
+//                    blackAndWhite[i][j] = 0;
+                else
+                    blackAndWhite[i][j] = 0;
+//                    blackAndWhite[i][j] = 255;
             }
         }
         return blackAndWhite;
     }
 
-    public static BufferedImage grayToImage(int[][] gray) {
+    public BufferedImage grayToImage(int[][] gray) {
         int width = gray.length;
         int height = gray[0].length;
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY);
@@ -112,7 +114,7 @@ public class ImageProcessing {
         return image;
     }
 
-    public static BufferedImage rgbToImage(int[][][] rgb) {
+    public BufferedImage rgbToImage(int[][][] rgb) {
         int width = rgb.length;
         int height = rgb[0].length;
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -124,5 +126,18 @@ public class ImageProcessing {
             }
         }
         return image;
+    }
+
+    public int[] getImageHistogram(int[][] data) {
+        int width = data.length;
+        int height = data[0].length;
+        int[] histogram = new int[256];
+
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                histogram[data[i][j]]++;
+            }
+        }
+        return histogram;
     }
 }

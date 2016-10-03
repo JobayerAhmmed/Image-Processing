@@ -12,8 +12,9 @@ public class CornerDetection {
 
     public static void detectCorner() throws IOException {
         String basePath = "G:\\Semester 8\\Image Prcessing\\Workspace\\Assignments\\src\\harris\\resources\\";
-        BufferedImage image = ImageProcessing.readImage(basePath + "building.jpg");
-        int[][] gray = ImageProcessing.getGray(image);
+        ImageProcessing imageProcessing = new ImageProcessing();
+        BufferedImage image = imageProcessing.readImage(basePath + "building.jpg");
+        int[][] gray = imageProcessing.getGray(image);
         int width = gray.length;
         int height = gray[0].length;
         float[][] data = intToFloat(gray);
@@ -84,8 +85,8 @@ public class CornerDetection {
         int[][] determinant = subtractMatrixPointToPoint(multiplyMatrixPointToPoint(xxg, yyg), multiplyMatrixPointToPoint(xyg, xyg));
         int[][] normalized = divideMatrixPointToPoint(determinant, addMatrixPointToPoint(xxg, yyg));
 
-        BufferedImage cornerImage = ImageProcessing.grayToImage(normalized);
-        ImageProcessing.writeImage(cornerImage, basePath + "cornerImage.png");
+        BufferedImage cornerImage = imageProcessing.grayToImage(normalized);
+        imageProcessing.writeImage(cornerImage, basePath + "cornerImage.png");
     }
 
     private static int[][] gaussianMask(int[][] data) {
