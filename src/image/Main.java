@@ -7,12 +7,15 @@ import colorimage.SkinDetection;
 import kmeans.Kmeans;
 import meanshift.MeanShift;
 import otsu.Otsu;
+import sobel.Sobel;
 
 import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        Sobel sobel = new Sobel();
+        sobel.runSobel();
 //        CornerDetection.detectCorner();
 
 //        LetterSeparation letterSeparation = new LetterSeparation();
@@ -30,7 +33,7 @@ public class Main {
 //        SkinDetection skinDetection = new SkinDetection();
 //        skinDetection.detectSkinByRgb();
 //
-        RedEye redEye = new RedEye();
-        redEye.detectRedEye();
+//        RedEye redEye = new RedEye();
+//        redEye.detectRedEye();
     }
 }

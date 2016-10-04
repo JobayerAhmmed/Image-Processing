@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
- * Created by bsse0 on 10/3/2016.
+ * Created by Jobayer on 10/3/2016.
  */
 public class FeatureExtraction {
     ImageProcessing imageProcessing = new ImageProcessing();
