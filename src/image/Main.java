@@ -4,6 +4,7 @@ import array.Array;
 import borno.LetterSeparation;
 import colorimage.RedEye;
 import colorimage.SkinDetection;
+import featureextraction.FeatureExtraction;
 import kmeans.Kmeans;
 import meanshift.MeanShift;
 import otsu.Otsu;
@@ -14,8 +15,8 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Sobel sobel = new Sobel();
-        sobel.runSobel();
+//        Sobel sobel = new Sobel();
+//        sobel.runSobel();
 //        CornerDetection.detectCorner();
 
 //        LetterSeparation letterSeparation = new LetterSeparation();
@@ -35,5 +36,7 @@ public class Main {
 //
 //        RedEye redEye = new RedEye();
 //        redEye.detectRedEye();
+        FeatureExtraction featureExtraction = new FeatureExtraction();
+        featureExtraction.runExtractFeature();
     }
 }
