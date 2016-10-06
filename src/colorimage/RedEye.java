@@ -14,7 +14,7 @@ public class RedEye {
 
     Array array = new Array();
     ImageProcessing imageProcessing = new ImageProcessing();
-    String basePath = "D:\\Image-Processing\\src\\colorimage\\resources\\";
+    String basePath = "G:\\Semester 8\\Image Prcessing\\Workspace\\Image-Processing\\src\\colorimage\\resources\\";
     String fileName = "eye";
 
     public void detectRedEye() throws IOException {
@@ -43,7 +43,7 @@ public class RedEye {
 
                 // set color
                 int pixelRgb = 0;
-                if (hue > ((-1)*Math.PI/4.0) && hue < (Math.PI/4.0) && saturation > 0.3) {
+                if ((hue > ((-1)*Math.PI/4.0) || hue < (Math.PI/4.0)) && saturation > 0.3) {
                     pixelRgb = 0 << 16 | 0 << 8 | 0;
                     outputImage.setRGB(i, j, pixelRgb);
                 }
