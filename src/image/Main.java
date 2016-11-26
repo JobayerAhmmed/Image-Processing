@@ -34,9 +34,9 @@ public class Main {
 //        SkinDetection skinDetection = new SkinDetection();
 //        skinDetection.detectSkinByRgb();
 //
-        RedEye redEye = new RedEye();
-        redEye.detectRedEye();
-//        FeatureExtraction featureExtraction = new FeatureExtraction();
-//        featureExtraction.runExtractFeature();
+//        RedEye redEye = new RedEye();
+//        redEye.detectRedEye();
+        FeatureExtraction featureExtraction = new FeatureExtraction();
+        featureExtraction.runExtractFeature();
     }
 }

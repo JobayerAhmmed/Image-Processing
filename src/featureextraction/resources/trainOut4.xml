@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<multiboost>
+	<algo>SingleStumpLearner</algo>
+	<weakhyp iter="0">
+		<alpha>0.180948</alpha>
+		<column>268</column>
+		<vArray size="2">
+			<class id="0">1</class>
+			<class id="1">-1</class>
+		</vArray>
+		<threshold>63.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="1">
+		<alpha>0.183918</alpha>
+		<column>139</column>
+		<vArray size="2">
+			<class id="0">-1</class>
+			<class id="1">1</class>
+		</vArray>
+		<threshold>31.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="2">
+		<alpha>0.163011</alpha>
+		<column>252</column>
+		<vArray size="2">
+			<class id="0">1</class>
+			<class id="1">-1</class>
+		</vArray>
+		<threshold>93.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="3">
+		<alpha>0.169142</alpha>
+		<column>89</column>
+		<vArray size="2">
+			<class id="0">-1</class>
+			<class id="1">1</class>
+		</vArray>
+		<threshold>48.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="4">
+		<alpha>0.140935</alpha>
+		<column>519</column>
+		<vArray size="2">
+			<class id="0">1</class>
+			<class id="1">-1</class>
+		</vArray>
+		<threshold>10.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="5">
+		<alpha>0.136099</alpha>
+		<column>341</column>
+		<vArray size="2">
+			<class id="0">1</class>
+			<class id="1">-1</class>
+		</vArray>
+		<threshold>48.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="6">
+		<alpha>0.142203</alpha>
+		<column>379</column>
+		<vArray size="2">
+			<class id="0">-1</class>
+			<class id="1">1</class>
+		</vArray>
+		<threshold>67.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="7">
+		<alpha>0.152688</alpha>
+		<column>251</column>
+		<vArray size="2">
+			<class id="0">1</class>
+			<class id="1">-1</class>
+		</vArray>
+		<threshold>150.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="8">
+		<alpha>0.148786</alpha>
+		<column>1</column>
+		<vArray size="2">
+			<class id="0">-1</class>
+			<class id="1">1</class>
+		</vArray>
+		<threshold>59.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+	<weakhyp iter="9">
+		<alpha>0.128755</alpha>
+		<column>495</column>
+		<vArray size="2">
+			<class id="0">-1</class>
+			<class id="1">1</class>
+		</vArray>
+		<threshold>73.5</threshold>
+	</weakhyp>
+	<!-- ################################## -->
+</multiboost>

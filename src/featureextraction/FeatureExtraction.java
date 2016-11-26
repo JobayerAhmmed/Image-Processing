@@ -18,19 +18,21 @@ public class FeatureExtraction {
     Sobel sobel = new Sobel();
 
     public void runExtractFeature() throws IOException {
-//        String basePath = "G:\\Semester 8\\Image Prcessing\\Workspace\\Image-Processing\\src\\feature\\resources\\";
+        String basePath = "G:\\Semester 8\\Image Prcessing\\Workspace\\Image-Processing\\src\\featureextraction\\resources\\";
 //        String outputFile = "G:\\Semester 8\\Image Prcessing\\Workspace\\Image-Processing\\src\\feature\\resources\\adaboostData.txt";
-        String basePath = "F:\\Academic\\Programming\\IntelliJ\\Image-Processing\\src\\featureextraction\\resources\\";
+//        String basePath = "F:\\Academic\\Programming\\IntelliJ\\Image-Processing\\src\\featureextraction\\resources\\";
 
-        clearFile(basePath+"train1.txt");
-//        extractFeature(basePath+"fold1\\Male\\", 2051, 0, basePath+"train1.txt");
-//        extractFeature(basePath+"fold2\\Male\\", 2051, 0, basePath+"train1.txt");
-//        extractFeature(basePath+"fold3\\Male\\", 2051, 0, basePath+"train1.txt");
-//        extractFeature(basePath+"fold4\\Male\\", 2051, 0, basePath+"train1.txt");
-        extractFeature(basePath+"fold1\\Female\\", 595, 1, basePath+"train1.txt");
-//        extractFeature(basePath+"fold2\\Female\\", 595, 1, basePath+"train1.txt");
-//        extractFeature(basePath+"fold3\\Female\\", 595, 1, basePath+"train1.txt");
-//        extractFeature(basePath+"fold4\\Female\\", 595, 1, basePath+"train1.txt");
+//        clearFile(basePath+"train1.txt");
+//        extractFeature(basePath+"fold0\\Male\\", 500, 0, basePath+"train1.txt");
+//        extractFeature(basePath+"fold0\\Female\\", 500, 1, basePath+"train1.txt");
+//        extractFeature(basePath+"fold1\\Male\\", 500, 0, basePath+"train1.txt");
+//        extractFeature(basePath+"fold1\\Female\\", 500, 1, basePath+"train1.txt");
+//        extractFeature(basePath+"fold2\\Male\\", 500, 0, basePath+"train1.txt");
+//        extractFeature(basePath+"fold2\\Female\\", 500, 1, basePath+"train1.txt");
+//        extractFeature(basePath+"fold3\\Male\\", 500, 0, basePath+"train1.txt");
+//        extractFeature(basePath+"fold3\\Female\\", 500, 1, basePath+"train1.txt");
+//        extractFeature(basePath+"fold4\\Male\\", 500, 0, basePath+"train1.txt");
+//        extractFeature(basePath+"fold4\\Female\\", 500, 1, basePath+"train1.txt");
     }
 
     public void extractFeature(String path, int n, int label, String outputFile) throws IOException {
@@ -53,6 +55,9 @@ public class FeatureExtraction {
             int[][] theta = getTheta(edgeX, edgeY);
             int minTheta = array.findMinFrom2d(theta);
             int maxTheta = array.findMaxFrom2d(theta);
+
+//            System.out.println("Max theta: " + maxTheta);
+//            System.out.println("Min theta: " + minTheta);
 
             int[] range = new int[10];
             int increaseAmount = (maxTheta - minTheta) / 10;
