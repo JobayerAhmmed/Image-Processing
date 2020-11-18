@@ -1,8 +1,8 @@
 # Image Processing
 
-As course requirements, several image processing and pattern recognition algorithms were implemented. 
+Several image processing and pattern recognition algorithms are implemented here in Java. 
 Moreover, Bengali character seperation from text images, and male and female feature extraction and detection 
-were two interesting works.
+are two interesting works.
 
 - Sobel Edge Detection
 - Hough Transform for Line Detection
